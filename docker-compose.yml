@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+    ruby:
+        build: ./ruby
+        volumes:
+            - ./ruby:/var/ruby
+            - data-volume:/tmp
+        links:
+            - selenium_hub
+            - selenium_standalone
+        command: ['ruby', '/var/ruby/download-test.rb']
+        depends_on:
+            - selenium_node
+            - selenium_standalone
+
+
+    selenium_hub:
+        image: selenium/hub:3.8.1-erbium
+
+    selenium_node:
+        image: selenium/node-chrome:3.8.1-erbium
+        depends_on:
+            - selenium_hub
+        environment:
+            HUB_HOST: selenium_hub
+        volumes:
+            - data-volume:/home/seluser/Downloads
+
+
+    selenium_standalone:
+        image: selenium/standalone-chrome
+        volumes:
+            - data-volume:/home/seluser/Downloads
+
+volumes:
+    data-volume:
