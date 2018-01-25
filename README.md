@@ -2,10 +2,10 @@
 ## Why?
 Created to demonstrate a feature discrepancy between the use of:
 
-* [selenium/standalone-chrome](https://hub.docker.com/r/selenium/standalone-chrome)
+* [selenium/standalone-chrome](https://hub.docker.com/r/selenium/standalone-chrome) (3.8.1-erbium)
 * and the combination of:
-    *  [selenium/hub](https://hub.docker.com/r/selenium/hub/)
-    *  [selenium/standalone-chrome](https://hub.docker.com/r/selenium/standalone-chrome)
+    *  [selenium/hub](https://hub.docker.com/r/selenium/hub/) (3.8.1-erbium)
+    *  [selenium/standalone-chrome](https://hub.docker.com/r/selenium/standalone-chrome) (3.8.1-erbium)
 
 
 ## Execution steps
