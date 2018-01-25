@@ -64,3 +64,7 @@ At the time of creation, [Option 2](#Option_2) gave this output:
     ruby_1                 | ================== END ==================
     selhubdltrouble_ruby_1 exited with code 0
 
+# Edit:
+## The Fix
+
+can be found  here [https://github.com/SeleniumHQ/docker-selenium/issues/663](https://github.com/SeleniumHQ/docker-selenium/issues/663)
